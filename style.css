@@ -14,6 +14,32 @@ body {
     justify-content: center; 
 }
 
+.start-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* higher than popup or image */
+}
+
+.start-content {
+    text-align: center;
+    color: white;
+}
+
+#start-button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+
 .game-container {
     position: fixed;
     top: 50%;
@@ -62,19 +88,21 @@ body {
 #area1 {
     position: absolute;
     top: 15%;      
-    left: 20%;     
-    width: 25%;   
-    height: 10%;   
+    left: 5%;     
+    width: 10%;   
+    height: 55%;   
     cursor: pointer;
-    background-color: red;
+    background-color: rgba(189, 104, 104, 0.722);
+    border: 1px solid #d62828;
 }
 #area2 {
     position: absolute;
     width: 25%;
-    height: 10%;
-    top: 30%;
-    left: 60%;
-    background-color: green;
+    height: 30%;
+    top: 5%;
+    left: 70%;
+    background-color: rgba(0, 128, 0, 0.457);
+    border: 1px solid green;
     cursor: pointer;
 }
 
@@ -82,10 +110,86 @@ body {
     position: absolute;
     width: 25%;
     height: 20%;
-    top: 54%;
-    left: 50%;
-    background-color: blue;
+    top: 74%;
+    left: 30%;
+    background-color: rgba(0, 0, 255, 0.433);
+    border: 1px solid blue;
     cursor: pointer;
+}
+
+#area4 {
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    top: 38%;
+    left: 85%;
+    background-color: rgba(255, 255, 0, 0.37);
+    border: 1px solid yellow;
+    cursor: pointer;
+}
+
+#area5 {
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    top: 15%;
+    left: 20%;
+    background-color: rgba(255, 0, 85, 0.406);
+    border: 1px solid rgb(255, 0, 85);
+    cursor: pointer;
+}
+
+#area6 {
+    position: absolute;
+    width: 10%;
+    height: 15%;
+    top: 45%;
+    left: 52%;
+    background-color: rgba(0, 255, 60, 0.382);
+    border: 1px solid rgb(0, 255, 60);
+    cursor: pointer;
+}
+
+#finish-button {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    left: 5%;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    border: 1px solid black;
+    cursor: pointer;
+    z-index: 1100;
+    transition: background-color 0.2s ease;
+}
+
+#finish-button:hover {
+    background-color: #5e5a5a;
+}
+
+.guess-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    color: white;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1500;
+}
+
+.result-message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
 }
 
 @media (max-width: 768px) {

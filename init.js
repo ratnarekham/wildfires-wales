@@ -1,4 +1,12 @@
 
+// start screen 
+
+const startButton = document.getElementById('start-button');
+const startScreen = document.querySelector('.start-screen');
+
+startButton.addEventListener('click', () => {
+    startScreen.style.display = 'none'; // hides the overlay
+  });
 
 // popups when user clicks on area of image
 
@@ -47,7 +55,46 @@ clickableAreas.forEach(area => {
     });
 });
 
+//finish investigation button 
 
+document.getElementById('finish-button').addEventListener('click', () => {
+  document.querySelector('.guess-screen').style.display = 'flex';
+});
+
+const foundClues = new Set();
+const totalClues = 6;
+
+document.querySelectorAll('.clickable-area').forEach(area => {
+  area.addEventListener('click', () => {
+    const clueText = area.dataset.clue;
+    if (!foundClues.has(clueText)) {
+      foundClues.add(clueText);
+    }
+
+    if (foundClues.size === totalClues) {
+      document.getElementById('finish-button').style.display = 'block';
+    }
+  });
+});
+
+// guesses logic
+
+document.getElementById('submit-guess').addEventListener('click', () => {
+  const cause = document.getElementById('cause-guess').value;
+  const location = document.getElementById('location-guess').value;
+  const resultMessage = document.getElementById('guess-result');
+
+  const correctCause = "carelessly left campfire";
+  const correctLocation = "Near the riverbank";
+
+  if (cause === correctCause && location === correctLocation) {
+    resultMessage.textContent = "Correct. The fire started from a carelessly left campfire near the riverbank.";
+    resultMessage.style.color = "limegreen";
+  } else {
+    resultMessage.textContent = "Not quite. Check the clues again.";
+    resultMessage.style.color = "red";
+  }
+});
 
 // typewriter animation for clue text 
 

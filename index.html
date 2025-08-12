@@ -8,12 +8,58 @@
     <title>Wildfires in Wales</title>
 </head>
 <body>
+
+
     <div class = "game-container">
+   
+        <div class="start-screen">
+        <div class="start-content">
+            <p>A wildfire has scorched the Welsh hills.
+                <br> Farmland destroyed, wildlife displaced, and no clear cause. 
+                <br>
+                <br> You’re the investigator.
+                <br> Search for clues, piece together the truth, and uncover how it all began.</p>
+            <button id="start-button">start</button>
+        </div>
+    </div>
+
         <div class="image-wrapper">
-        <img src="images/background.jpg" alt="Wildfire Image" class="img">
-        <div class="clickable-area" id="area1" data-clue="Clue 1: The fire started near the river."></div>
-        <div class="clickable-area" id="area2" data-clue="Clue 2: Look for signs of human activity."></div>
-        <div class="clickable-area" id="area3" data-clue="Clue 3: Check the wind direction."></div>
+        <img src="images/wildfire-sketch.jpeg" alt="Wildfire Image" class="img">
+        <div class="clickable-area" id="area1" data-clue="The way the trees burned uphill shows the fire spread fast with the wind. Since then, heavy rains have caused mudslides, blocking a nearby footpath used by locals to get to town."></div>
+        <div class="clickable-area" id="area2" data-clue="Mrs. Jenkins smelled smoke late at night but thought it was a neighbour’s barbecue. By morning, the smoke was so thick that several local children couldn’t go to school because the roads were congested with emergency vehicles."></div>
+        <div class="clickable-area" id="area3" data-clue="After the fire, plastic wrappers and broken glass were found floating in the river. Fisherman Tom says the water smells strange now, and many fish have disappeared — making it harder to earn a living."></div>
+        <div class="clickable-area" id="area4" data-clue="A red kite’s nest was destroyed in the fire, and the local rangers worry the birds won’t return this season."></div>
+        <div class="clickable-area" id="area5" data-clue="Farmer Lewis lost much of his hay when the fire swept through early one morning. With crops gone, he worries about feeding his sheep this winter and how he’ll pay the bills."></div>
+        <div class="clickable-area" id="area6" data-clue="Near the riverbank, scorched ground and leftover ashes show where a small campfire was carelessly left smoldering. Local hikers say they saw smoke rising late that evening, possibly the spark that started the wildfire."></div>
+
+     </div>
+
+
+        <button id="finish-button">Finish Investigation</button>
+
+        <div class="guess-screen" style="display: none;">
+            <div class="guess-content">
+                <h2>Make your guess</h2>
+                <label for="cause-guess">Cause of fire:</label>
+                <select id="cause-guess">
+                    <option value="">--Choose--</option>
+                    <option value="cigarette">Cigarette</option>
+                    <option value="carelessly left campfire">carelessly left campfire</option>
+                    <option value="glass">Glass bottle</option>
+                </select>
+                
+                <label for="location-guess">Location:</label>
+                <select id="location-guess">
+                    <option value="">--Choose--</option>
+                    <option value="Near the riverbank">Near the riverbank</option>
+                    <option value="tent">Near the tent</option>
+                    <option value="log">By the log pile</option>
+                </select>
+                
+                <button id="submit-guess">Submit</button>
+
+                <p id="guess-result" class="result-message"></p>
+            </div>
         </div>
     </div>
 
