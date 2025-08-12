@@ -96,6 +96,41 @@ document.getElementById('submit-guess').addEventListener('click', () => {
   }
 });
 
+// sounds
+
+let currentAudio = null; 
+
+const playSound = (src) => {
+  if (currentAudio && !currentAudio.paused) {
+    currentAudio.pause();
+    currentAudio.currentTime = 0;
+  }
+
+  const audio = new Audio(src);
+  currentAudio = audio;
+  audio.play();
+};
+document.querySelectorAll('.clickable-area').forEach(area => {
+  area.addEventListener('click', (e) => {
+    e.stopPropagation(); 
+
+    const soundSrc = area.dataset.sound;
+    if (soundSrc) {
+      playSound(soundSrc);
+    }
+  });
+});
+
+document.querySelector('.game-container').addEventListener('click', () => {
+  if (currentAudio && !currentAudio.paused) {
+    currentAudio.pause();
+    currentAudio.currentTime = 0;
+  }
+
+});
+
+
+
 // typewriter animation for clue text 
 
 let currentTypewriterTimeout = null;
