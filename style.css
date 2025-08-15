@@ -24,7 +24,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1000; /* higher than popup or image */
+    z-index: 1000;
 }
 
 .start-content {
@@ -42,9 +42,8 @@ body {
 
 .game-container {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
     max-width: 100vw;
     max-height: 100vh;
     display: flex;
@@ -58,9 +57,10 @@ body {
     display: inline-block;
     width: 100%;
     height: auto;
-    max-width: 90vw;
-    max-height: 90vh;
+    max-width: 100vw;
+    max-height: 100vh;
 }
+
 .img {
     width: 100%;
     height: auto;
