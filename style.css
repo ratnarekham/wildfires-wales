@@ -236,6 +236,11 @@ z-index: 1;
     text-align: center;
 }
 
+.chart {
+    max-width: 100%;
+    height: auto;
+}
+
 /* RESPONSIVE STUFF */
 
 @media (max-width: 768px) {

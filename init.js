@@ -156,12 +156,12 @@ function typeWriter(text, element, speed) {
     typeNextCharacter();
 }
 
+// "skip to story" button function
+
 document.getElementById('skip-link').addEventListener('click', function (e) {
   e.preventDefault();
 
-  // ✅ Enable scrolling on the page
   document.body.style.overflow = 'auto';
 
-  // ✅ Scroll to the article section
   document.getElementById('main-article').scrollIntoView({ behavior: 'smooth' });
 });

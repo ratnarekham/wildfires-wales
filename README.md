@@ -1,19 +1,19 @@
 # About
 
-This dissertation project lookxsxs at wildfires in Wales.
+This dissertation project looks at wildfires in Wales.
 
 # Notes on Data
 
 Data collected from Fire and Rescue Services in Wales.
 
 # Sounds Credits
-- Red kite Sound from B Whyte, XC973025. Accessible at www.xeno-canto.org/973025.
+- Red kite sound from B Whyte, XC973025. Accessible at www.xeno-canto.org/973025.
 
-- Campfire Sound by newlocknew -- https://freesound.org/s/636709/ -- License: Attribution NonCommercial 4.0
+- Campfire sound by newlocknew -- https://freesound.org/s/636709/ -- License: Attribution NonCommercial 4.0
 
-- River flowing sound. by Tom_Kaszuba -- https://freesound.org/s/660262/ -- License: Creative Commons 0
+- River flowing sound by Tom_Kaszuba -- https://freesound.org/s/660262/ -- License: Creative Commons 0
 
-- Farm Sound by konakaboom -- https://freesound.org/s/238309/ -- License: Attribution NonCommercial 4.0
+- Farm sound by konakaboom -- https://freesound.org/s/238309/ -- License: Attribution NonCommercial 4.0
 
 - Emergency Vehicles sound by kyles -- https://freesound.org/s/637366/ -- License: Creative Commons 0
 
